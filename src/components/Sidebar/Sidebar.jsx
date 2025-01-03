@@ -10,26 +10,15 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
-import logo from "../../../assests/images/logo.svg";
-import "../../../assests/styles/antdOveride.css";
+import logo from "../../assests/images/logo.svg";
+import "../../assests/styles/antdOveride.css";
 
 const Sidebar = ({ closeSidebar }) => {
   const screens = useBreakpoint();
   return (
     <Flex vertical>
       {!screens.md ? (
-        <div
-        //   style={{
-        //     display: "flex",
-        //     justifyContent: "space-between",
-        //     alignItems: "center",
-        //     background: "white",
-        //     padding: "0.5rem 1rem",
-        //     // position: "fixed",
-        //     // maxwidth: "100%",
-        //     // height: "4rem",
-        //   }}
-        >
+        <div>
           <Flex
             justify="space-between"
             align="center"
@@ -61,15 +50,6 @@ const Sidebar = ({ closeSidebar }) => {
         </div>
       ) : (
         <div>
-          {/* {!screens.md && (
-            <Button
-              icon={<CloseOutlined />}
-              type="text"
-              onClick={closeSidebar}
-              style={{ fontSize: "1.25rem" }}
-            />
-        )} */}
-          {/* <Col span={24} style={{}}> */}
           <img
             style={{
               height: "65%",
@@ -80,7 +60,6 @@ const Sidebar = ({ closeSidebar }) => {
             src={logo}
             alt="logo"
           />
-          {/* </Col> */}
         </div>
       )}
 

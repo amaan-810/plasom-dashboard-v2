@@ -2,14 +2,14 @@
 import React from "react";
 import { Button, Flex, Avatar } from "antd";
 import { MenuOutlined, UserOutlined } from "@ant-design/icons";
-import logo from "../../../assests/images/logo.svg";
+import logo from "../../assests/images/logo.svg";
 
 const MobileHeader = ({ toggleSidebar }) => (
   <Flex
     justify="space-between"
     align="center"
     style={{
-      background: "#F2F2F2",
+      background: "white",
       padding: "0.5rem 1rem",
       position: "fixed",
       width: "100%",

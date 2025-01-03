@@ -5,6 +5,7 @@ import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
 
 import Sidebar from "./Sidebar/Sidebar";
 import MobileHeader from "./Sidebar/MobileHeader";
+import MyDayContent from "./Content/MyDayContent";
 
 const Base = () => {
   const screens = useBreakpoint();
@@ -49,7 +50,7 @@ const Base = () => {
             />
           </Sider>
         </Col>
-        <Col xs={24} sm={24} md={16} lg={21} xl={20} className="content">
+        <Col xs={24} sm={24} md={16} lg={21} xl={20} >
           <Layout
             style={{
               paddingLeft: !screens.md ? 0 : "1rem",
@@ -57,7 +58,7 @@ const Base = () => {
             }}
           >
             {!screens.md && <MobileHeader toggleSidebar={toggleSidebar} />}
-            {/* <HomeContent isMobile={isMobile} goals={goals} screens={screens} /> */}
+            <MyDayContent  /> 
           </Layout>
         </Col>
       </Layout>
