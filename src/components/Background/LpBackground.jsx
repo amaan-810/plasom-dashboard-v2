@@ -2,6 +2,7 @@ import React from 'react'
 import { Row, Col } from "antd";
 import "../../assests/styles/background.css";
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint";
+import PropTypes from 'prop-types';
 
 
 
@@ -15,6 +16,10 @@ const LpBackground = ({children}) => {
           </Col>
         </Row>
       );
+}
+
+LpBackground.propTypes = {
+  children: PropTypes.node
 }
 
 export default LpBackground

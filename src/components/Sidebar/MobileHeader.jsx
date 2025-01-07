@@ -1,5 +1,6 @@
 // MobileHeader.jsx
 import React from "react";
+import PropTypes from 'prop-types';
 import { Button, Flex, Avatar } from "antd";
 import { MenuOutlined, UserOutlined } from "@ant-design/icons";
 import logo from "../../assests/images/logo.svg";
@@ -37,5 +38,10 @@ const MobileHeader = ({ toggleSidebar }) => (
     />
   </Flex>
 );
+
+MobileHeader.propTypes = {
+  toggleSidebar: PropTypes.func
+}
+
 
 export default MobileHeader;

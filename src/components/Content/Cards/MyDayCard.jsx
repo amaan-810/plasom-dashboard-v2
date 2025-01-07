@@ -1,5 +1,7 @@
-import { Card } from 'antd'
+
 import React from 'react'
+import PropTypes from 'prop-types';
+import { Card } from 'antd'
 
 const MyDayCard = ({children}) => {
   return (
@@ -7,6 +9,9 @@ const MyDayCard = ({children}) => {
       {children}
     </Card>
   )
+}
+MyDayCard.propTypes = {
+  children: PropTypes.node
 }
 
 export default MyDayCard

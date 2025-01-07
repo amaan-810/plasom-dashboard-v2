@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Row, Col, Flex, Button, Menu, Avatar } from "antd";
 import {
   UnorderedListOutlined,
@@ -115,6 +116,10 @@ const Sidebar = ({ closeSidebar }) => {
     </Flex>
   );
 };
+
+Sidebar.propTypes = {
+ closeSidebar: PropTypes.func
+}
 
 export default Sidebar;
 

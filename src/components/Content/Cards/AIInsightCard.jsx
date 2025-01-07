@@ -174,7 +174,7 @@ const AIInsightCard = () => {
       </Row>
 
       {/* Left-aligned Bold Text */}
-      <p className="f-bricolage" style={{ fontSize: "1.75", fontWeight: "600", margin: "1rem 0 1.5rem 0" }}>
+      <p className="f-bricolage" style={{ fontSize: "1.75rem", fontWeight: "600", margin: "1rem 0 1.5rem 0" }}>
         Your <span style={{ color: "yellow" }}>time management</span> improved
         last week!
       </p>
@@ -190,7 +190,7 @@ const AIInsightCard = () => {
           alignSelf: "flex-start", // Align button to the left
         }}
       >
-        <img src={stars}/>Explore my stats
+        <img src={stars} alt=""/>Explore my stats
       </Button>
 
       <Flex style={{paddingTop: "1.5rem"}}>
