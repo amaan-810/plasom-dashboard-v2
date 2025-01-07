@@ -16,13 +16,13 @@ const Base = () => {
   return (
     <Row
       style={{
-        height: "100vh",
+        //height: "100vh",
       }}
     >
       <Layout
         style={
           {
-             minHeight: "100vh"
+             //minHeight: "100vh"
           }
         }
       >
@@ -32,15 +32,17 @@ const Base = () => {
           md={8}
           lg={5}
           xl={4}
-          className="sider"
         >
           <Sider
             // trigger={null}
             theme="light"
             width={!screens.md ? "100%" : "auto"}
+            //width={"100%"}
             style={{
               height: "100vh",
-              display: !screens.md && !sidebarVisible ? "none" : "block",
+              // display: !screens.md && !sidebarVisible ? "none" : "block",
+              // overflow: 'inherit',
+              // position: 'fixed',
             }}
           >
             <Sidebar
@@ -50,14 +52,19 @@ const Base = () => {
             />
           </Sider>
         </Col>
-        <Col xs={24} sm={24} md={16} lg={21} xl={20} >
+        <Col xs={sidebarVisible? 0 : 24 } 
+        sm={sidebarVisible? 0 : 24 } 
+        md={16} 
+        lg={19} 
+        xl={20} 
+        >
           <Layout
             style={{
-              paddingLeft: !screens.md ? 0 : "1rem",
+              // paddingLeft: !screens.md ? 0 : "1rem",
               // paddingTop: isMobile ? "0" : "0"
             }}
           >
-            {!screens.md && <MobileHeader toggleSidebar={toggleSidebar} />}
+            {(!screens.md  && !sidebarVisible) && <MobileHeader toggleSidebar={toggleSidebar}/> }
             <MyDayContent  /> 
           </Layout>
         </Col>
